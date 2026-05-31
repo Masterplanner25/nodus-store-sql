@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nodus-store-sql"
+version = "0.1.0"
+description = "SQLAlchemy-backed persistence adapters for Nodus runs, events, and jobs"
+authors = [{ name = "Shawn Knight" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["sqlalchemy>=2.0"]
+
+[project.optional-dependencies]
+async = ["sqlalchemy[asyncio]>=2.0", "aiosqlite>=0.19"]
+dev = ["pytest>=7", "pytest-asyncio", "aiosqlite>=0.19", "sqlalchemy[asyncio]>=2.0"]
+
+[project.urls]
+Homepage = "https://github.com/Masterplanner25/nodus-store-sql"
+Repository = "https://github.com/Masterplanner25/nodus-store-sql"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
