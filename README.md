@@ -1,5 +1,7 @@
 # nodus-store-sql
 
+> **Status:** v0.1.0 — published on [PyPI](https://pypi.org/project/nodus-store-sql/).
+
 SQLAlchemy-backed persistence adapters for Nodus runs, events, and jobs.
 
 Provides sync and async stores for the three core durable state surfaces:
